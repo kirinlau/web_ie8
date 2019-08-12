@@ -1,0 +1,11 @@
+
+<div>
+    <!-- <%= JSON.stringify(noticeListInfo)%> -->
+    <% var arr = noticeListInfo.Result.ResultList||[]; for (var i= 0; i<arr.length;i++) {%>
+        <div class="notice-content">
+            <p class="notice-time"><%= arr[i].CreateTime %></p>
+            <p class="notice-content-title"><a href="./details?id=<%=arr[i].DotId%>&stippleGuid=<%=arr[i].StippleGuid%>"><%= arr[i].DotTitle %></a></p>
+            <hr/>
+        </div>
+    <%}%>
+</div>

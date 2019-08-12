@@ -1,0 +1,1 @@
+module.exports.myDomain = '.kdfafa.com'

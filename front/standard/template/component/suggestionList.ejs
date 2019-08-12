@@ -1,0 +1,24 @@
+
+<% var arr = suggestionListInfo.Result.ResultList||[]; for (var i= 0; arr&&i<arr.length;i++) { %>
+    <div class="suggestion-item">
+        <div class="suggestion-content avatar">
+            <% if(arr[i].ImageUrl){ %>
+                <img src="<%=arr[i].ImageUrl %>" alt="">
+            <% }else{%>
+                <img src="/public/standard/vendor/images/img_yd_kdy.png">
+            <% }%>
+            <!-- <img src="<%=arr[i].ImageUrl %>" alt="image"> -->
+        </div>
+        <div class="suggestion-content right-content">
+            <!-- <p> -->
+            <p class="release release-name"><%=arr[i].UserName.substr(0,3)+"****"+arr[i].UserName.substr(7,4) %></p>   
+            <p class="release release-time">发布时间：<%=arr[i].CreateTime%></p>
+            <!-- </p> -->
+            <p class="user-msg"><%=arr[i].FeedbackContent%></p>
+            <% if(arr[i].Reply){ %>
+            <p class="reply">管理员 回复：<%= arr[i].Reply%></p>
+            <% }%>
+        </div>
+        <hr class="horizotal-line"/>
+    </div>
+<%}%>

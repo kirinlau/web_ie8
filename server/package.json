@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "egg-static": "^2.1.1",
+    "egg-view": "^2.1.1",
+    "egg-view-ejs": "^2.0.0"
+  }
+}

@@ -1,0 +1,77 @@
+body{
+  background: #F8FAFF;
+}
+.nav {
+  background: @primary-color;
+  color: #cdd4ec;
+  font-size: 18px;
+  height: 60px;
+}
+@primary-color : #415796;
+@button-color:#5970B4;
+
+.nav .nav-content .nav-search input{background-color: #ffffff;}
+.nav .nav-content .nav-search input::-webkit-input-placeholder{color: @primary-color}
+.nav .nav-content .nav-search input::-moz-placeholder{color: @primary-color}
+.nav .nav-content .nav-search input::-ms-input-placeholder{color: @primary-color}
+/*首页*/
+/*订单跟踪、快速寄件、在线客服、意见反馈*/
+.home-feature .home-feature-item .kuaidigenzong{background: url(/public/standard/vendor/longbangImages/ddgz_start.png) ;background-repeat: no-repeat;color: @primary-color}
+.home-feature .home-feature-item .kuaidigenzong:hover{background: url(/public/standard/vendor/longbangImages/ddgz_end.png) ;background-repeat: no-repeat;color: @primary-color}
+.home-feature .home-feature-item .kuaisujijian{background: url(/public/standard/vendor/longbangImages/ksjj_start.png) ;background-repeat: no-repeat;color: @primary-color}
+.home-feature .home-feature-item .kuaisujijian:hover{background: url(/public/standard/vendor/longbangImages/ksjj_end.png) ;background-repeat: no-repeat;color: @primary-color}
+.home-feature .home-feature-item .zaixiankefu{background: url(/public/standard/vendor/longbangImages/zxkf_start.png) ;background-repeat: no-repeat;color: @primary-color;}
+.home-feature .home-feature-item .zaixiankefu:hover{background: url(/public/standard/vendor/longbangImages/zxkf_end.png) ;background-repeat: no-repeat;color: @primary-color;}
+.home-feature .home-feature-item .yijianfankui{background: url(/public/standard/vendor/longbangImages/yjfk_start.png) ;background-repeat: no-repeat;color: @primary-color;}
+.home-feature .home-feature-item .yijianfankui:hover{background: url(/public/standard/vendor/longbangImages/yjfk_end.png) ;background-repeat: no-repeat;color: @primary-color;}
+/*业务类型*/
+.home-service .home-service-bottom-content .home-service-type{border: 1px solid @button-color;}
+.home-service .home-service-bottom-content .home-service-type:hover{background-color: @button-color;border-color: @button-color}
+
+/*底线*/
+.home-service h4 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ededed;
+  position:relative;
+}
+.home-service h4::after{
+  display:inline-block;
+  height:2px;
+  background:#999999;
+  width:75px;
+  content:'';
+  position:absolute;
+  bottom:-1px;
+  left:0;
+}
+
+/*快速寄件*/
+.mailing .print-address .s-title.b{color: @primary-color}
+.s-color-l{color: @primary-color}
+.mailing ._collection-tap{background: @button-color;color: #ffffff}
+.u-b-l-l {background: @button-color;color: #ffffff}
+.u-but-40 {background: @button-color;}
+.u-b-l-w{border: 1px solid #7A89B5;color: @primary-color}
+a{color: @primary-color}
+.electronic-face-order .face-order-body .face-order-content .submit, 
+.select_kd_all .search .search_input .search_input_but,
+.notice-list .notice-list-content .bottom-button-bar .notice-list-button,
+.suggestion-module .suggestion-body .bottom-button-bar .suggestion-list-button,
+#ImgUploadB0_btn, #orderBar .inline .ties, .pop .pop-login-primary-button{background: @button-color}
+#noselesct .selectCourierBut{color: @primary-color}
+.mailing #quickSend.active{
+  background-color:#ffffff;
+  color: #415796;
+  border-top: solid 1px #415796
+}
+.mailing #batchOrderTitle.active{
+  background-color:#ffffff;
+  color:#415796;
+  border-top: solid 1px #415796
+}
+/*关于我们*/
+.about-we .about-we-title, 
+.notice-list .notice-list-title,
+.suggestion-module .suggestion-title, 
+.notice-list .notice-list-content .notice-content .notice-content-title a{color: #666666 !important}
+.suggestion-module .suggestion-body #suggestion-input{color: #666666;background: rgba(144,153,185,0.14);border-radius: 4px;border: none}

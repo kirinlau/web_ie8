@@ -1,0 +1,47 @@
+<% var arr = courierInfo.Result.ResultList||[]; for (var i= 0; i<arr.length;i++) {%>
+<div class="courier-item">
+    <div class="item-inline-block avatar">
+        <a href="/courierdetails?stuffid=<%=arr[i].StaffId%>">
+            <% if(arr[i].Photo ){ %>
+                <img src="<%=arr[i].Photo%>" >
+            <% }else{%>
+                <img src="/public/standard/vendor/images/img_yd_kdy.png" >
+            <% }%>
+        </a>
+    </div>
+    <div class="item-inline-block describe">
+        <p class="courier-name">&nbsp;<a href="/courierdetails?stuffid=<%=arr[i].StaffId%>"><%= arr[i].StaffName%></a>
+            <% if(arr[i].IsReceiveOrder == 1){ %>
+                <span class="status">停止接单</span> 
+            <% }else{%>
+                <span class="status">正常接单</span>
+            <%}%>
+            &emsp;
+            <span class="courier-service">&nbsp;<%= arr[i].CourierService %></span>
+        </p>
+            
+        <p class="courier-total">&nbsp;累计接单：<%= arr[i].AcceptOrderTotal %></p>
+        <p class="courier-work-time">&nbsp;收件时间：<%= arr[i].WorkingDay %></p>
+        <p class="courier-handle">&nbsp;<span><a href="/courierdetails?stuffid=<%=arr[i].StaffId%>">收派范围</a></span> | 
+            <% if(arr[i].IsFollow){ %>
+                <span onclick="return false">已关注</span>
+            <% }else{%>
+                <span class="js-follow-courier" >+ 关注</span>
+                <span style="display:none"><%= arr[i].StaffId%></span>
+            <%}%>
+            <!-- <span>+ 关注</span> -->
+             | <span><a href="/print?=<%=arr[i].StaffId%>">填单寄件</a></span>
+        </p>
+    </div>
+    <div class="item-inline-block courier-qrcode">
+        <% if(arr[i].QRCode){ %>
+            <img src="<%= arr[i].QRCode%>">
+        <% }else{%>
+            <img src="/public/standard/vendor/images/moren_qr.png">
+        <%}%>
+        
+        <p>微信扫码寄件</p>
+    </div>
+    <hr/>
+</div>
+<%}%>

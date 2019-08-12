@@ -1,0 +1,8 @@
+<% var arr = talentInfo.Result.ResultList; for (var i= 0; arr&&i<arr.length;i++) {%>
+    <div class="talent-item">
+        <p class="talent-position">岗位名称：<%=arr[i].Station %> (<%=arr[i].NumberOfRecruiters %>人)</p>
+        <p>薪资范围：<%=arr[i].SalaryRange %> </p>
+        <p>岗位职责：<%=arr[i].JobResponsibilities %></p>
+        <hr class="horizotal-line"/>
+    </div>
+<%}%>

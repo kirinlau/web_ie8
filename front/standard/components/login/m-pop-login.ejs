@@ -1,0 +1,63 @@
+<div class="pop js-login-pop" >
+  <div class="pop-inner">
+      <span class="pop-login-close">
+          <img src="/public/standard/vendor/images/close.png" width="30" height="30">
+        </span>
+    <div class="pop-login-nav">
+      <div class="active">密码登录</div>
+      <div>短信登录</div>
+    </div>
+    <!-- 密码登陆 -->
+    <form class=" pop-login-content-pwd js-login js-login-pwd">
+      <fieldset>
+        <!-- <div class="pop-login-content-pwd "> -->
+          <div class="pop-login-item">
+            <input  type="text" name="UserName"  value="" placeholder="请输入手机号码" />
+            <div class=" error-tips" style="display:none"></div>
+          </div>
+          <div class="pop-login-item">
+            <input  type="password" name="Pwd" value="" placeholder="请输入密码" />
+            <div class="error error-tips js-login-tips" style="display:none"></div>
+          </div>
+          <div class="pop-login-item" style="display:none">
+              <input   type="text" name="Source" value="shop"  />
+            </div>
+        <!-- </div> -->
+      </fieldset>
+    </form>
+    <!-- 密码登陆end-->
+    <!-- 短信登陆 -->
+    <form class="pop-login-content-sms js-login js-login-sms" style="display:none">
+      <fieldset>
+        <!-- <div class="pop-login-content-sms "> -->
+            <div class="pop-login-item">
+            <input type="text" name="UserName" placeholder="请输入手机号码" />
+            <div class="error-tips" style="display:none" ></div>
+            </div>
+          <div class="pop-login-item">
+            <input type="text" name="Pwd" placeholder="请输入短信验证码" />
+            <span class="login-code-button">获取验证码</span>
+            <div class="error error-tips js-login-tips" style="display:none" ></div>
+          </div>
+        <!-- </div> -->
+        <div class="pop-login-item" style="display:none">
+            <input type="text" name="Source" value="shop" />
+          </div>
+      </fieldset>
+    </form>
+    <!-- 短信登陆end-->
+    <a href="javascript:void(0);" class="pop-login-primary-button">登录</a>
+    <label for="auto_login" class="auto-login">
+      <input
+        type="checkbox"
+        id="auto_login"
+        name="auto_login"
+        value="0"
+        checkbox="false"
+      />下次自动登录
+    </label>
+    <span class="auto-line">
+      <a href="javascript:void(0);" id="click_z_reg">注册</a>
+    </span>
+  </div>
+</div>

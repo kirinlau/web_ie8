@@ -1,0 +1,44 @@
+<div class="header">
+  <% information = ShopInfo.Result%>
+<!--关注状态-->
+<!--保证金服务隐藏-->
+<%if(information.ServicePromise==""||information.ServicePromise==null){var _ServicePromise=""}else{var _ServicePromise=information.ServicePromise.split(",");var _ServicePromise_data="";for(var i=0;i<_ServicePromise.length;i++){_ServicePromise_data=_ServicePromise_data+'<i class="fw_list_bq">'+_ServicePromise[i]+"</i>"};};%>
+<!--保证金显示隐藏-->
+<%if(information.Deposit){var Deposit=""}else{var Deposit="f-none"};%>
+<!--认证-->
+<%if(information.Aptitude){var Aptitude=""}else{var Aptitude="f-none"};%>
+<!--实力-->
+<%if(information.Scale){var Scale=""}else{var Scale="f-none"};%>
+<% if(information.ShopState==2){var zhuangtai=""}else{var zhuangtai="f-none"} %>
+<% if(information.QRCode==""||information.QRCode==null){var QRCode="/public/standard/vendor/images/moren_qr.png"}else{var QRCode = information.QRCode} %>
+<input class="js-customer-code" value="<%=information.CustomerCode%>" style="display:none"/>
+  <div class="header-content">
+  <div class="header-left">
+    <div class="header-logo">
+      <img src="<%= information.CompanyLogo%>" title="<%= information.ExpCompany %>" alt="">
+    </div>
+    <div class="header-mid-line">
+      <div></div>
+    </div>
+    <div class="header-company-info">
+      <h5 class="header-name" title="<%= information.StippleName %>" ><%= information.StippleName %></h5>
+      <div class="header-desc" title="<%= information.ADRemark %>" ><%= information.ADRemark %></div>
+      <% if(information.Isfollow){ %> 
+        <div class="js-header-like header-like" StippleGuid="<%=information.StippleGuid%>" >
+          <img class="header-icon" src="/public/standard/vendor/images/loved.png"/>已经收藏
+          </div>
+      <% }else{ %> 
+        <div class="js-header-like  header-unlike" StippleGuid="<%=information.StippleGuid%>">
+            <img class="header-icon" src="/public/standard/vendor/images/love.png"/>点击收藏
+          </div>
+      <% } %>      
+    </div>
+  </div>
+  <div class="header-right">
+    <div>
+      <img src="<%=QRCode%>" alt="">
+    <p>扫一扫快速寄件</p>
+  </div>
+  </div>
+</div>
+</div>
