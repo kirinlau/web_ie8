@@ -21,7 +21,7 @@
   "bugs": {},
   "dependencies": {
     "egg": "^2.14.2",
-    "lodash": "3.10.1"
+    "lodash": "4.17.19"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
