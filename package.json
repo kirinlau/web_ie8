@@ -57,7 +57,7 @@
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
     "raw-loader": "^1.0.0",
-    "shelljs": "^0.8.2",
+    "shelljs": "^0.8.5",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.0.1",
